@@ -17,12 +17,12 @@ Available states
 .. contents::
     :local:
 
-``sphinx-doc``
+``sphinx_doc``
 --------------
 
 Installs the Sphinx package.
 
-``sphinx-doc.sphinx_venv``
+``sphinx_doc.sphinx_venv``
 --------------------------
 
 Installs the Sphinx package to an empty virtualenv.
