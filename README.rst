@@ -1,6 +1,6 @@
-===================
-sphinx-docs-formula
-===================
+==================
+sphinx-doc-formula
+==================
 
 Formulas to install the `Sphinx`_ documentation system.
 
@@ -17,13 +17,13 @@ Available states
 .. contents::
     :local:
 
-``sphinx-docs``
----------------
+``sphinx-doc``
+--------------
 
 Installs the Sphinx package.
 
-``sphinx-docs.sphinx_venv``
----------------------------
+``sphinx-doc.sphinx_venv``
+--------------------------
 
 Installs the Sphinx package to an empty virtualenv.
 
