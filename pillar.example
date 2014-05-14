@@ -1,0 +1,6 @@
+sphinx-doc:
+  lookup:
+    pkg: python-sphinx
+    pip_pkg: Sphinx
+
+  venv: /path/to/sphinx-virtualenv
