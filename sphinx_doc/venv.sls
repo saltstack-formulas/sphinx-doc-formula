@@ -7,6 +7,12 @@ include:
 {% set config = salt['pillar.get']('sphinx_doc', {}) %}
 
 {% if 'venv' in config %}
+sphinx_venv_dir:
+  file:
+    - directory
+    - name: {{ config.venv }}
+    - makedirs: True
+
 sphinx_venv:
   pip:
     - installed
@@ -15,4 +21,5 @@ sphinx_venv:
     - require:
       - pkg: python-pip
       - pkg: virtualenv
+      - file: sphinx_venv_dir
 {% endif %}
