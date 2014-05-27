@@ -27,9 +27,9 @@ Installs the Sphinx package.
 
 Installs the Sphinx package to an empty virtualenv.
 
-Requires the formulas:
+Requires:
 
-* pip
-* virtualenv
+* virtualenv-formula
+* Pillar:
 
-Requires a Pillar setting to determine the location of the virtualenv.
+  * ``sphinx_doc:venv`` to point to the virtualenv that Sphinx is installed to.
