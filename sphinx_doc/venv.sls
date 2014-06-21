@@ -1,6 +1,7 @@
 {% from "sphinx_doc/map.jinja" import sphinx with context %}
 
 include:
+  - pip
   - virtualenv
 
 {% set config = salt['pillar.get']('sphinx_doc', {}) %}
