@@ -9,7 +9,7 @@ Formulas to install the `Sphinx`_ documentation system.
 .. note::
 
     See the full `Salt Formulas installation and usage instructions
-    <http://docs.saltstack.com/r/ref:conventions-formula>`_.
+    <http://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html>`_.
 
 Available states
 ================
