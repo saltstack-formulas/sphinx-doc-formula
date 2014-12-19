@@ -8,20 +8,17 @@ include:
 
 {% if 'venv' in config %}
 sphinx_venv_dir:
-  file:
-    - directory
+  file.directory:
     - name: {{ config.venv }}
     - makedirs: True
 
 sphinx_venv:
-  virtualenv:
-    - managed
+  virtualenv.managed:
     - name: {{ config.venv }}
     - require:
       - pkg: virtualenv
       - file: sphinx_venv_dir
-  pip:
-    - installed
+  pip.installed:
     - name: {{ sphinx.pip_pkg }}
     - bin_env: {{ config.venv }}
     - require:
