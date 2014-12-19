@@ -22,6 +22,30 @@ Available states
 
 Installs the Sphinx package.
 
+``sphinx_doc.build``
+--------------------
+
+A macro for generating a state that will trigger a docs build.
+
+Usage example. The following will trigger a build of the HTML documentation
+anytime the Git repo is updated::
+
+    {% from "sphinx_doc/build.sls" import sphinx_build %}
+    {% sphinx_build(
+        'mydocs_build',
+        'html',
+        '/path/to/mydocs/docs',
+        '/path/to/mydocs/docs/_build',
+        wait=True) %}
+
+    mydocs:
+      git.latest:
+        - name: git@github.com/myco/mydocs.git
+        - target: /var/www/mydocs
+        - rev: master
+        - watch_in:
+          - cmd: mydocs_build
+
 ``sphinx_doc.sphinx_venv``
 --------------------------
 
